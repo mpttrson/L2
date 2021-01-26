@@ -1,0 +1,10 @@
+{
+   "MICKADMIN-8vj39cves61cva2g-L1-hdi_db": {
+     "object_owner": {
+       "container_roles":["UPS_L1_ROLE"]
+     },
+     "application_user": {
+       "container_roles":["UPS_L1_ROLE"]
+     }
+   } 
+}

@@ -1,0 +1,9 @@
+{
+  "S_CurrencyCodeView": {
+    "target": {
+      "object": "CurrencyCodeView",
+      "schema": "L1",
+      "database": "HXE"
+    }
+  }
+}

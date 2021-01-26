@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="L1CurrencyCodeView" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="L1CurrencyCodeView"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="S_CurrencyCodeView">
+    <resourceUri>S_CurrencyCodeView</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="KURST"/>
+      <viewAttribute id="FCURR"/>
+      <viewAttribute id="TCURR"/>
+      <viewAttribute id="GDATU"/>
+      <viewAttribute id="UKURS"/>
+      <viewAttribute id="FFACT"/>
+      <viewAttribute id="TFACT"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="S_CurrencyCodeView">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KURST" source="KURST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FCURR" source="FCURR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TCURR" source="TCURR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GDATU" source="GDATU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UKURS" source="UKURS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FFACT" source="FFACT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TFACT" source="TFACT"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Client"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="KURST" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Exchange Rate Type"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KURST"/>
+    </attribute>
+    <attribute id="FCURR" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="From currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FCURR"/>
+    </attribute>
+    <attribute id="TCURR" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="To-currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TCURR"/>
+    </attribute>
+    <attribute id="GDATU" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date As of Which the Exchange Rate Is Effective"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GDATU"/>
+    </attribute>
+    <attribute id="UKURS" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Exchange Rate"/>
+      <keyMapping columnObjectName="Projection_1" columnName="UKURS"/>
+    </attribute>
+    <attribute id="FFACT" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ratio for the &quot;From&quot; Currency Units"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FFACT"/>
+    </attribute>
+    <attribute id="TFACT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ratio for the &quot;To&quot; Currency Units"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TFACT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="116" y="222"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
