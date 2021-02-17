@@ -1,7 +1,21 @@
 {
-  "S_CurrencyCodeView": {
+  "S_CurrencyMainView": {
     "target": {
-      "object": "CurrencyCodeView",
+      "object": "CurrencyMainView",
+      "schema": "L1",
+      "database": "HXE"
+    }
+  },
+  "S_CurrencyRateView": {
+    "target": {
+      "object": "CurrencyRateView",
+      "schema": "L1",
+      "database": "HXE"
+    }
+  },
+  "S_CurrencyFactorView": {
+    "target": {
+      "object": "CurrencyFactorView",
       "schema": "L1",
       "database": "HXE"
     }

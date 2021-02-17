@@ -4,34 +4,23 @@
 <localVariables/>
 <variableMappings/>
 <dataSources>
-  <DataSource id="S_CurrencyCodeView">
-    <resourceUri>S_CurrencyCodeView</resourceUri>
+  <DataSource id="S_CurrencyMainView">
+    <resourceUri>S_CurrencyMainView</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
   <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
     <viewAttributes>
       <viewAttribute id="MANDT"/>
-      <viewAttribute id="KURST"/>
-      <viewAttribute id="FCURR"/>
-      <viewAttribute id="TCURR"/>
       <viewAttribute id="GDATU"/>
-      <viewAttribute id="UKURS"/>
-      <viewAttribute id="FFACT"/>
-      <viewAttribute id="TFACT"/>
+      <viewAttribute id="WAERS"/>
+      <viewAttribute id="ISOCD"/>
+      <viewAttribute id="ALTWR"/>
+      <viewAttribute id="XPRIMARY"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <restrictedViewAttributes/>
-    <input node="S_CurrencyCodeView">
-      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="KURST" source="KURST"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="FCURR" source="FCURR"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="TCURR" source="TCURR"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="GDATU" source="GDATU"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="UKURS" source="UKURS"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="FFACT" source="FFACT"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="TFACT" source="TFACT"/>
-    </input>
+    <input node="S_CurrencyMainView"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="Projection_1">
@@ -40,33 +29,17 @@
       <descriptions defaultDescription="Client"/>
       <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
     </attribute>
-    <attribute id="KURST" order="2" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Exchange Rate Type"/>
-      <keyMapping columnObjectName="Projection_1" columnName="KURST"/>
-    </attribute>
-    <attribute id="FCURR" order="3" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="From currency"/>
-      <keyMapping columnObjectName="Projection_1" columnName="FCURR"/>
-    </attribute>
-    <attribute id="TCURR" order="4" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="To-currency"/>
-      <keyMapping columnObjectName="Projection_1" columnName="TCURR"/>
-    </attribute>
-    <attribute id="GDATU" order="5" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="GDATU" order="2" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Date As of Which the Exchange Rate Is Effective"/>
       <keyMapping columnObjectName="Projection_1" columnName="GDATU"/>
     </attribute>
-    <attribute id="UKURS" order="6" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Exchange Rate"/>
-      <keyMapping columnObjectName="Projection_1" columnName="UKURS"/>
+    <attribute id="WAERS" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency Key"/>
+      <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
     </attribute>
-    <attribute id="FFACT" order="7" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Ratio for the &quot;From&quot; Currency Units"/>
-      <keyMapping columnObjectName="Projection_1" columnName="FFACT"/>
-    </attribute>
-    <attribute id="TFACT" order="8" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Ratio for the &quot;To&quot; Currency Units"/>
-      <keyMapping columnObjectName="Projection_1" columnName="TFACT"/>
+    <attribute id="ISOCD" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ISO currency code"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ISOCD"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
